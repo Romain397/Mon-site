@@ -30,7 +30,8 @@ To run the project locally:
    cd mon-site
 
 3. Open index.html in your browser.
-   ⚠️ This project requires internet access to fetch articles from the API.
+
+⚠️ This project requires internet access to fetch articles from the API.
 
  License
  This project is licensed under the MIT License.
