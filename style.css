@@ -1,0 +1,204 @@
+/* ====== STYLE GLOBAL ====== */
+
+/* Corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 20px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Titre principal */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #444;
+}
+
+/* ====== BARRE DE NAVIGATION ====== */
+
+/* Conteneur principal de la navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logo du site */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Liste de liens (horizontal par défaut) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Liens de navigation */
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+}
+
+/* ====== MENU BURGER ====== */
+
+/* Masqué par défaut (sauf mobile) */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+  z-index: 999;
+}
+
+/* Barres du burger */
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s ease;
+}
+
+/* Animation burger en croix quand actif */
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ====== ARTICLES ====== */
+
+#posts-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.post {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.post h2 {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #007acc;
+}
+
+.post p {
+  margin: 0;
+}
+
+/* ====== BARRE DE RECHERCHE ====== */
+
+#search-bar {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ====== BOUTON THEME CLAIR/SOMBRE ====== */
+
+#theme-toggle {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* ====== THEME SOMBRE ====== */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .post {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+body.dark-mode .post h2 {
+  color: #4ea8de;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+body.dark-mode .nav-links li a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .burger .line {
+  background-color: #f0f0f0;
+}
+
+body.dark-mode h1 {
+  color: #fff;
+}
+
+/* ====== RESPONSIVE (écran < 768px) ====== */
+
+@media screen and (max-width: 768px) {
+  /* Affiche le menu burger */
+  .burger {
+    display: flex;
+  }
+
+  /* Cache les liens de navigation */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 0;
+  }
+
+  /* Affiche les liens quand on clique sur le burger */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+
+  body.dark-mode .nav-links {
+    background-color: #1e1e1e;
+  }
+}

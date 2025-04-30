@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site d'articles</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <h2 class="logo">MonSite</h2>
+
+        <!-- Bouton menu burger -->
+        <div id="burger" class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <!-- Liens de navigation -->
+        <ul id="nav-links" class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">À propos</a></li>
+        </ul>
+
+        <!-- Bouton de thème clair/sombre -->
+        <button id="theme-toggle">Mode sombre</button>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <h1>Articles</h1>
+        <input type="text" id="search-bar" placeholder="Rechercher des articles..." />
+        <div id="posts-container"></div>
+    </main>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
